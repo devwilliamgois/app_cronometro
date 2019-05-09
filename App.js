@@ -89,7 +89,7 @@ export default class App extends Component {
           
         }
 
-        if(this.contador_milisegindos == 100){
+        if(this.contador_milisegindos == 60){
           this.contador_segundos += 1;
           this.contador_milisegindos = 0;
           s.milesimo = '00';
@@ -193,7 +193,7 @@ export default class App extends Component {
         }
       
         this.setState(s);
-      },1)
+      },10)
         
     }
   }
@@ -205,7 +205,9 @@ export default class App extends Component {
       this.timer = null;
 
   }
+
   let s = this.state;
+  s.funcao = 'INICIAR';
 
   s.segundos = '00';
   s.milesimo = '00';
